@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
-import { CURRENCY, getWatchImageUrl, percentage, type Watch, type WatchSpecs } from "@/lib/watches";
+import { CURRENCY, percentage, type Watch, type WatchSpecs } from "@/lib/watches";
 
 type Props = {
   open: boolean;
@@ -65,14 +65,18 @@ export function WatchSpecModal({ open, watch, currentPrice, specs, onClose }: Pr
         <div className="px-4 pb-4 md:px-5 md:pb-5">
           <div className="grid gap-4 md:grid-cols-2">
             <div className="relative h-56 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800/70">
-              <Image
-                src={getWatchImageUrl(watch)}
-                alt={`${watch.brand} ${watch.model}`}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={95}
-              />
+              {watch.imageUrl ? (
+                <Image
+                  src={watch.imageUrl}
+                  alt={`${watch.brand} ${watch.model}`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={95}
+                />
+              ) : (
+                <div className={`h-full w-full bg-gradient-to-br ${watch.accent}`} />
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-3">

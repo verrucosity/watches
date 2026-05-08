@@ -55,15 +55,8 @@ export const percentage = new Intl.NumberFormat("en-US", {
 
 export const tierOrder: Array<Tier | "All"> = ["All", "Entry", "Mid", "High", "Haute"];
 
-export const FALLBACK_WATCH_IMAGE =
-  "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp";
-
 export function hashNumber(input: string) {
   return Array.from(input).reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-}
-
-export function getWatchImageUrl(watch: Pick<Watch, "imageUrl">) {
-  return watch.imageUrl || FALLBACK_WATCH_IMAGE;
 }
 
 export function getWatchSpecs(watch: Watch): WatchSpecs {
@@ -251,7 +244,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 4.1,
     popularity: 92,
     accent: "from-orange-300 to-amber-600",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp",
   },
   {
     id: "hamilton-murph",
@@ -263,7 +255,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 2.7,
     popularity: 88,
     accent: "from-stone-300 to-neutral-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp",
   },
   {
     id: "tissot-prx",
@@ -275,7 +266,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 6.8,
     popularity: 95,
     accent: "from-cyan-300 to-sky-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/1.webp",
   },
   {
     id: "longines-zulu-time",
@@ -287,7 +277,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 3.6,
     popularity: 87,
     accent: "from-emerald-300 to-green-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/1.webp",
   },
   {
     id: "tudor-bb58",
@@ -299,7 +288,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 5.4,
     popularity: 93,
     accent: "from-rose-300 to-red-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/1.webp",
   },
   {
     id: "grand-seiko-snowflake",
@@ -311,7 +299,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 2.1,
     popularity: 81,
     accent: "from-blue-200 to-indigo-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/1.webp",
   },
   {
     id: "minase-five-windows",
@@ -334,7 +321,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 4.8,
     popularity: 97,
     accent: "from-zinc-300 to-zinc-800",
-    imageUrl: "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/1.webp",
   },
   {
     id: "rolex-submariner",
@@ -346,7 +332,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 7.2,
     popularity: 99,
     accent: "from-lime-300 to-emerald-800",
-    imageUrl: "https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/1.webp",
   },
   {
     id: "cartier-santos",
@@ -358,7 +343,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 1.9,
     popularity: 86,
     accent: "from-neutral-300 to-stone-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/1.webp",
   },
   {
     id: "kurono-tokyo-reiwa",
@@ -381,7 +365,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 2.6,
     popularity: 84,
     accent: "from-slate-300 to-slate-800",
-    imageUrl: "https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/1.webp",
   },
   {
     id: "audemars-royal-oak",
@@ -393,7 +376,6 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 9.9,
     popularity: 90,
     accent: "from-amber-200 to-orange-700",
-    imageUrl: "https://cdn.dummyjson.com/product-images/womens-watches/women%27s-wrist-watch/1.webp",
   },
   {
     id: "patek-nautilus",
@@ -405,6 +387,5 @@ export const WATCH_CATALOG: Watch[] = [
     marketDelta: 12.4,
     popularity: 92,
     accent: "from-sky-300 to-blue-900",
-    imageUrl: "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/1.webp",
   },
 ];
