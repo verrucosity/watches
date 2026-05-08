@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f5ef;
+  --foreground: #111827;
+}
+
+html.dark {
+  --background: #0b1220;
+  --foreground: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  background: #f59e0b;
+  color: #0b1324;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/70,
+html.dark .bg-white\/75,
+html.dark .bg-white\/80,
+html.dark .bg-white\/85,
+html.dark .bg-zinc-50,
+html.dark .bg-zinc-100 {
+  background-color: #111827 !important;
+}
+
+html.dark .text-zinc-900,
+html.dark .text-zinc-800,
+html.dark .text-zinc-700,
+html.dark .text-zinc-600,
+html.dark .text-zinc-500 {
+  color: #e5e7eb !important;
+}
+
+html.dark .border-zinc-300,
+html.dark .border-zinc-300\/50,
+html.dark .border-zinc-300\/60,
+html.dark .border-zinc-200,
+html.dark .border-white\/40,
+html.dark .border-white\/60 {
+  border-color: #374151 !important;
+}
+

@@ -1,0 +1,12 @@
+- [x] Verify that copilot-instructions.md exists in .github
+- [x] Clarify project requirements (Next.js premium watch tracker)
+- [x] Scaffold the project in current workspace
+- [x] Customize the project with requested features
+- [x] Install required extensions (none required)
+- [x] Compile and validate the project (lint + build passed)
+- [x] Create and run task decision (no additional VS Code task needed)
+- [ ] Launch the project (pending user confirmation for debug launch)
+- [x] Ensure documentation is complete (README updated, comments removed)
+
+- Keep communication concise and focused.
+- Follow development best practices.
