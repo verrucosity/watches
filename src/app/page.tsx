@@ -11,6 +11,7 @@ import {
   OWNED_KEY,
   TRACKED_KEY,
   WATCH_CATALOG,
+  getWatchImageUrl,
   getWatchSpecs,
   hashNumber,
   percentage,
@@ -373,18 +374,14 @@ export default function Home() {
                 className="group rounded-3xl border border-zinc-300/60 bg-white/85 p-5 shadow-[0_20px_40px_-28px_rgba(24,24,27,0.7)] backdrop-blur-sm transition hover:-translate-y-1"
               >
                 <div className="relative mb-4 h-56 overflow-hidden rounded-2xl border border-zinc-200">
-                  {watch.imageUrl ? (
-                    <Image
-                      src={watch.imageUrl}
-                      alt={`${watch.brand} ${watch.model}`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      quality={95}
-                    />
-                  ) : (
-                    <div className={`h-full w-full bg-gradient-to-br ${watch.accent}`} />
-                  )}
+                  <Image
+                    src={getWatchImageUrl(watch)}
+                    alt={`${watch.brand} ${watch.model}`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    quality={95}
+                  />
                   <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/55 to-transparent p-3 text-white">
                     <p className="text-xs uppercase tracking-[0.25em] opacity-90">{watch.tier}</p>
                     <p className="mt-1 font-display text-xl">{watch.brand}</p>
@@ -490,18 +487,14 @@ export default function Home() {
                   className="rounded-3xl border border-zinc-300/60 bg-white p-5 shadow-[0_20px_40px_-28px_rgba(24,24,27,0.7)]"
                 >
                   <div className="relative mb-3 h-52 overflow-hidden rounded-2xl border border-zinc-200">
-                    {watch.imageUrl ? (
-                      <Image
-                        src={watch.imageUrl}
-                        alt={`${watch.brand} ${watch.model}`}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        quality={95}
-                      />
-                    ) : (
-                      <div className={`h-full w-full bg-gradient-to-br ${watch.accent}`} />
-                    )}
+                    <Image
+                      src={getWatchImageUrl(watch)}
+                      alt={`${watch.brand} ${watch.model}`}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      quality={95}
+                    />
                     <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/55 to-transparent p-3 text-white">
                       <p className="text-[11px] uppercase tracking-[0.2em]">Live API</p>
                       <p className="font-display text-lg">{watch.brand}</p>

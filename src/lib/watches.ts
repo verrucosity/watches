@@ -55,8 +55,15 @@ export const percentage = new Intl.NumberFormat("en-US", {
 
 export const tierOrder: Array<Tier | "All"> = ["All", "Entry", "Mid", "High", "Haute"];
 
+export const FALLBACK_WATCH_IMAGE =
+  "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp";
+
 export function hashNumber(input: string) {
   return Array.from(input).reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+}
+
+export function getWatchImageUrl(watch: Pick<Watch, "imageUrl">) {
+  return watch.imageUrl || FALLBACK_WATCH_IMAGE;
 }
 
 export function getWatchSpecs(watch: Watch): WatchSpecs {
