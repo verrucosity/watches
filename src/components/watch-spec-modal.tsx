@@ -43,23 +43,23 @@ export function WatchSpecModal({ open, watch, currentPrice, specs, onClose }: Pr
         className="w-full max-w-3xl max-h-[92dvh] overflow-y-auto rounded-3xl border border-zinc-300 bg-white shadow-2xl overscroll-contain dark:border-zinc-700 dark:bg-zinc-900"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="sticky top-0 z-10 mb-4 border-b border-zinc-200 bg-white/95 p-4 backdrop-blur-sm dark:border-zinc-700 dark:bg-zinc-900/95 md:p-5">
+        <div className="spec-modal-header sticky top-0 z-10 mb-4 border-b border-zinc-300/80 bg-slate-50/95 p-4 backdrop-blur-sm md:p-5">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Spec Sheet</p>
-              <h3 className="font-display text-3xl leading-tight text-zinc-900 dark:text-zinc-50">{watch.brand} {watch.model}</h3>
-              <p className="text-xs uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-400">{watch.reference}</p>
+              <p className="spec-modal-header__meta text-xs uppercase tracking-[0.2em] text-[rgb(82,82,91)]">Spec Sheet</p>
+              <h3 className="spec-modal-header__title font-display text-3xl leading-tight text-[rgb(24,24,27)]">{watch.brand} {watch.model}</h3>
+              <p className="spec-modal-header__meta text-xs uppercase tracking-[0.18em] text-[rgb(82,82,91)]">{watch.reference}</p>
             </div>
             <button
               type="button"
               onClick={onClose}
               aria-label="Close spec sheet"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300 text-xl leading-none text-zinc-700 hover:bg-zinc-100 dark:border-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-800"
+              className="spec-modal-header__close inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-400 text-xl leading-none text-[rgb(63,63,70)] hover:bg-zinc-100"
             >
               x
             </button>
           </div>
-          <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Tap outside the sheet or use the X to close.</p>
+          <p className="spec-modal-header__meta mt-2 text-xs text-[rgb(82,82,91)]">Tap outside the sheet or use the X to close.</p>
         </div>
 
         <div className="px-4 pb-4 md:px-5 md:pb-5">

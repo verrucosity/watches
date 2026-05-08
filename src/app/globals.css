@@ -59,3 +59,25 @@ html.dark .border-white\/60 {
   border-color: #374151 !important;
 }
 
+html.dark .spec-modal-header {
+  background-color: rgba(9, 14, 28, 0.96) !important;
+  border-bottom-color: #334155 !important;
+}
+
+html.dark .spec-modal-header__title {
+  color: #f8fafc !important;
+}
+
+html.dark .spec-modal-header__meta {
+  color: #94a3b8 !important;
+}
+
+html.dark .spec-modal-header__close {
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark .spec-modal-header__close:hover {
+  background-color: #1e293b !important;
+}
+
